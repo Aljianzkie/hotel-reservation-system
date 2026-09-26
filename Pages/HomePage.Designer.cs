@@ -1,6 +1,6 @@
 ﻿namespace hotel_reservation_system
 {
-    partial class home
+    partial class HomePage
     {
         /// <summary>
         /// Required designer variable.

@@ -5,7 +5,7 @@ namespace hotel_reservation_system
 {
     public class DatabaseManager
     {
-        private readonly string _connectionString = "server=localhost;database=foodfestival_db;uid=root;pwd=root;port=3306";
+        private readonly string _connectionString = "server=localhost;database=hotel-reservation-system_db;uid=root;pwd=root;port=3307";
 
         public DataTable ExecuteQuery(string query)
         {

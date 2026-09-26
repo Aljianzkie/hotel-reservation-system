@@ -1,6 +1,6 @@
 ﻿namespace hotel_reservation_system
 {
-    partial class login
+    partial class LoginPage
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            linkLabel1 = new LinkLabel();
+            btnLogin = new Button();
             txtPassword = new TextBox();
             txtUsername = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
-            btnLogin = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.AppWorkspace;
+            panel1.Controls.Add(linkLabel1);
             panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(txtPassword);
             panel1.Controls.Add(txtUsername);
@@ -54,6 +56,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 0;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(530, 290);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(114, 15);
+            linkLabel1.TabIndex = 7;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Click here to SignUp";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // btnLogin
+            // 
+            btnLogin.Location = new Point(575, 324);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(75, 23);
+            btnLogin.TabIndex = 6;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
             // 
             // txtPassword
             // 
@@ -105,15 +127,6 @@
             panel2.Size = new Size(406, 450);
             panel2.TabIndex = 0;
             // 
-            // btnLogin
-            // 
-            btnLogin.Location = new Point(575, 324);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(75, 23);
-            btnLogin.TabIndex = 6;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
-            // 
             // login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -137,5 +150,6 @@
         private Label label2;
         private Label label1;
         private Button btnLogin;
+        private LinkLabel linkLabel1;
     }
 }

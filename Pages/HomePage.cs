@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace hotel_reservation_system
 {
-    public partial class home : Form
+    public partial class HomePage : Form
     {
-        public home()
+        public HomePage()
         {
             InitializeComponent();
         }
