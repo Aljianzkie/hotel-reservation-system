@@ -1,8 +1,7 @@
 ﻿using BCrypt.Net;
-using hotel_reservation_system;
 using System.Data;
 
-namespace PhilippineFoodFestival
+namespace hotel_reservation_system
 {
     public class Authenticator
     {

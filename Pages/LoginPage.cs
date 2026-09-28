@@ -1,5 +1,4 @@
 using hotel_reservation_system.Pages;
-using PhilippineFoodFestival;
 
 namespace hotel_reservation_system
 {
@@ -13,13 +12,15 @@ namespace hotel_reservation_system
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SignUpPage signup = new SignUpPage();
+
             signup.Show();
             this.Hide();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            if (string.IsNullOrEmpty(txtUsername.Text) ||
+                string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Please input all fields");
                 return;
@@ -30,7 +31,12 @@ namespace hotel_reservation_system
             if (auth.AdminLogin(txtUsername.Text, txtPassword.Text))
             {
                 MessageBox.Show("Login Successfully");
+
                 DashboardPage dashboard = new DashboardPage();
+
+                // Pass the username to DashboardPage
+                dashboard.Username = txtUsername.Text;
+
                 this.Hide();
                 dashboard.ShowDialog();
                 this.Show();
