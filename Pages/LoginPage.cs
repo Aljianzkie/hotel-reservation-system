@@ -30,9 +30,9 @@ namespace hotel_reservation_system
             if (auth.AdminLogin(txtUsername.Text, txtPassword.Text))
             {
                 MessageBox.Show("Login Successfully");
-                //AdminPage admin = new AdminPage();
+                DashboardPage dashboard = new DashboardPage();
                 this.Hide();
-                //admin.ShowDialog();
+                dashboard.ShowDialog();
                 this.Show();
 
                 txtUsername.Clear();
