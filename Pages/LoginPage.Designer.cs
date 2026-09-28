@@ -76,11 +76,13 @@
             btnLogin.TabIndex = 6;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // txtPassword
             // 
             txtPassword.Location = new Point(530, 253);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(170, 23);
             txtPassword.TabIndex = 5;
             // 
@@ -127,14 +129,14 @@
             panel2.Size = new Size(406, 450);
             panel2.TabIndex = 0;
             // 
-            // login
+            // LoginPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Name = "login";
-            Text = "Main";
+            Name = "LoginPage";
+            Text = "Home";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

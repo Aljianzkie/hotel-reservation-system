@@ -1,4 +1,5 @@
 using hotel_reservation_system.Pages;
+using PhilippineFoodFestival;
 
 namespace hotel_reservation_system
 {
@@ -14,6 +15,33 @@ namespace hotel_reservation_system
             SignUpPage signup = new SignUpPage();
             signup.Show();
             this.Hide();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Please input all fields");
+                return;
+            }
+
+            Authenticator auth = new Authenticator();
+
+            if (auth.AdminLogin(txtUsername.Text, txtPassword.Text))
+            {
+                MessageBox.Show("Login Successfully");
+                //AdminPage admin = new AdminPage();
+                this.Hide();
+                //admin.ShowDialog();
+                this.Show();
+
+                txtUsername.Clear();
+                txtPassword.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password");
+            }
         }
     }
 }
