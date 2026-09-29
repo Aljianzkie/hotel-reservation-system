@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            linkLabel1 = new LinkLabel();
             btnLogin = new Button();
             txtPassword = new TextBox();
             txtUsername = new TextBox();
@@ -43,7 +42,6 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.AppWorkspace;
-            panel1.Controls.Add(linkLabel1);
             panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(txtPassword);
             panel1.Controls.Add(txtUsername);
@@ -57,20 +55,9 @@
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 0;
             // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(530, 290);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(114, 15);
-            linkLabel1.TabIndex = 7;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Click here to SignUp";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
-            // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(575, 324);
+            btnLogin.Location = new Point(579, 315);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(75, 23);
             btnLogin.TabIndex = 6;
@@ -152,6 +139,5 @@
         private Label label2;
         private Label label1;
         private Button btnLogin;
-        private LinkLabel linkLabel1;
     }
 }
