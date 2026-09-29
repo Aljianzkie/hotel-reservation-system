@@ -45,8 +45,15 @@
             MovePanel(btnReservation);
         }
 
+        private void btnUserSettings_Click(object sender, EventArgs e)
+        {
+            MovePanel(btnUserSettings);
+            userControlSettings1.Clear();
+            userControlSettings1.Show();
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
-        {       
+        {
             DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (DialogResult.Yes == result)

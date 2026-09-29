@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            btnUserSettings = new Button();
             panelSlide = new Panel();
             btnReservation = new Button();
             btnRoom = new Button();
@@ -48,16 +49,19 @@
             label1 = new Label();
             panel6 = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
+            userControlSettings1 = new hotel_reservation_system.Tabs.UserControlSettings();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.RoyalBlue;
+            panel1.Controls.Add(btnUserSettings);
             panel1.Controls.Add(panelSlide);
             panel1.Controls.Add(btnReservation);
             panel1.Controls.Add(btnRoom);
@@ -71,10 +75,23 @@
             panel1.Size = new Size(339, 606);
             panel1.TabIndex = 0;
             // 
+            // btnUserSettings
+            // 
+            btnUserSettings.FlatStyle = FlatStyle.Flat;
+            btnUserSettings.ForeColor = Color.White;
+            btnUserSettings.Location = new Point(25, 500);
+            btnUserSettings.Margin = new Padding(3, 4, 3, 4);
+            btnUserSettings.Name = "btnUserSettings";
+            btnUserSettings.Size = new Size(285, 45);
+            btnUserSettings.TabIndex = 5;
+            btnUserSettings.Text = "User Settings";
+            btnUserSettings.UseVisualStyleBackColor = true;
+            btnUserSettings.Click += btnUserSettings_Click;
+            // 
             // panelSlide
             // 
             panelSlide.BackColor = Color.White;
-            panelSlide.Location = new Point(38, 275);
+            panelSlide.Location = new Point(25, 214);
             panelSlide.Name = "panelSlide";
             panelSlide.Size = new Size(11, 45);
             panelSlide.TabIndex = 0;
@@ -83,7 +100,7 @@
             // 
             btnReservation.FlatStyle = FlatStyle.Flat;
             btnReservation.ForeColor = Color.White;
-            btnReservation.Location = new Point(38, 433);
+            btnReservation.Location = new Point(25, 431);
             btnReservation.Margin = new Padding(3, 4, 3, 4);
             btnReservation.Name = "btnReservation";
             btnReservation.Size = new Size(285, 45);
@@ -96,7 +113,7 @@
             // 
             btnRoom.FlatStyle = FlatStyle.Flat;
             btnRoom.ForeColor = Color.White;
-            btnRoom.Location = new Point(38, 380);
+            btnRoom.Location = new Point(25, 359);
             btnRoom.Margin = new Padding(3, 4, 3, 4);
             btnRoom.Name = "btnRoom";
             btnRoom.Size = new Size(285, 45);
@@ -109,7 +126,7 @@
             // 
             btnClient.FlatStyle = FlatStyle.Flat;
             btnClient.ForeColor = Color.White;
-            btnClient.Location = new Point(38, 327);
+            btnClient.Location = new Point(25, 286);
             btnClient.Margin = new Padding(3, 4, 3, 4);
             btnClient.Name = "btnClient";
             btnClient.Size = new Size(285, 45);
@@ -122,7 +139,7 @@
             // 
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(38, 275);
+            btnDashboard.Location = new Point(25, 214);
             btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(285, 45);
@@ -224,13 +241,15 @@
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(790, 37);
+            btnLogout.BackColor = Color.RoyalBlue;
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(779, 23);
             btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(84, 30);
+            btnLogout.Size = new Size(84, 33);
             btnLogout.TabIndex = 0;
             btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
             // 
             // panel5
@@ -254,6 +273,7 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(userControlSettings1);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(339, 160);
             panel6.Name = "panel6";
@@ -263,6 +283,16 @@
             // timer1
             // 
             timer1.Tick += timer1_Tick;
+            // 
+            // userControlSettings1
+            // 
+            userControlSettings1.AutoSize = true;
+            userControlSettings1.Dock = DockStyle.Fill;
+            userControlSettings1.Location = new Point(0, 0);
+            userControlSettings1.Name = "userControlSettings1";
+            userControlSettings1.Size = new Size(886, 398);
+            userControlSettings1.TabIndex = 0;
+            userControlSettings1.Visible = false;
             // 
             // DashboardPage
             // 
@@ -290,6 +320,8 @@
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -314,5 +346,7 @@
         private Panel panelSlide;
         private Panel panel6;
         private System.Windows.Forms.Timer timer1;
+        private Button btnUserSettings;
+        private Tabs.UserControlSettings userControlSettings1;
     }
 }
