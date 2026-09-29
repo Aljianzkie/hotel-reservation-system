@@ -9,14 +9,6 @@ namespace hotel_reservation_system
             InitializeComponent();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            SignUpPage signup = new SignUpPage();
-
-            signup.Show();
-            this.Hide();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUsername.Text) ||
