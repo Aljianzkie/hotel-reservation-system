@@ -10,8 +10,10 @@
 
         private void MovePanel(Control btn)
         {
+            panelSlide.Parent = btn.Parent;
             panelSlide.Top = btn.Top;
             panelSlide.Height = btn.Height;
+            panelSlide.BringToFront();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
