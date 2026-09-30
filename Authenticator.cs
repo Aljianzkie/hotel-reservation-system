@@ -1,5 +1,5 @@
-﻿using BCrypt.Net;
-using System.Data;
+﻿using System.Data;
+
 
 namespace hotel_reservation_system
 {
@@ -9,27 +9,17 @@ namespace hotel_reservation_system
         {
             DatabaseManager db = new DatabaseManager();
 
-            // Only search by username
-            string sql = "SELECT Password FROM users WHERE Username = @username";
+            string sql = "SELECT * FROM users WHERE Username = @username AND Password = @password";
 
             var parameters = new Dictionary<string, object>
             {
-                { "@username", username }
+                {"@username", username },
+                {"@password", password }
             };
 
             DataTable result = db.ExecuteQueryWithParams(sql, parameters);
 
-            // If Username does not exist return false
-            if (result.Rows.Count == 0)
-            {
-                return false;
-            }
-
-            // Get the hashed password from database
-            string storedHash = result.Rows[0]["Password"].ToString();
-
-            // Compare entered password with stored BCrypt hash
-            return BCrypt.Net.BCrypt.Verify(password, storedHash);
+            return result.Rows.Count > 0;
         }
     }
 }
