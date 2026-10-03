@@ -40,16 +40,17 @@
             label3 = new Label();
             label2 = new Label();
             panel3 = new Panel();
-            lblUsername = new Label();
-            label4 = new Label();
+            userSettingsLabel = new Label();
             panel4 = new Panel();
+            lblUsername = new Label();
             lblDateTime = new Label();
+            label4 = new Label();
             btnLogout = new Button();
             panel5 = new Panel();
             label1 = new Label();
             panel6 = new Panel();
-            timer1 = new System.Windows.Forms.Timer(components);
             userControlSettings1 = new hotel_reservation_system.Tabs.UserControlSettings();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -72,14 +73,14 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(339, 606);
+            panel1.Size = new Size(339, 720);
             panel1.TabIndex = 0;
             // 
             // btnUserSettings
             // 
             btnUserSettings.FlatStyle = FlatStyle.Flat;
             btnUserSettings.ForeColor = Color.White;
-            btnUserSettings.Location = new Point(25, 500);
+            btnUserSettings.Location = new Point(25, 561);
             btnUserSettings.Margin = new Padding(3, 4, 3, 4);
             btnUserSettings.Name = "btnUserSettings";
             btnUserSettings.Size = new Size(285, 45);
@@ -91,7 +92,7 @@
             // panelSlide
             // 
             panelSlide.BackColor = Color.White;
-            panelSlide.Location = new Point(25, 214);
+            panelSlide.Location = new Point(25, 218);
             panelSlide.Name = "panelSlide";
             panelSlide.Size = new Size(11, 45);
             panelSlide.TabIndex = 0;
@@ -100,7 +101,7 @@
             // 
             btnReservation.FlatStyle = FlatStyle.Flat;
             btnReservation.ForeColor = Color.White;
-            btnReservation.Location = new Point(25, 431);
+            btnReservation.Location = new Point(25, 479);
             btnReservation.Margin = new Padding(3, 4, 3, 4);
             btnReservation.Name = "btnReservation";
             btnReservation.Size = new Size(285, 45);
@@ -113,12 +114,12 @@
             // 
             btnRoom.FlatStyle = FlatStyle.Flat;
             btnRoom.ForeColor = Color.White;
-            btnRoom.Location = new Point(25, 359);
+            btnRoom.Location = new Point(25, 393);
             btnRoom.Margin = new Padding(3, 4, 3, 4);
             btnRoom.Name = "btnRoom";
             btnRoom.Size = new Size(285, 45);
             btnRoom.TabIndex = 3;
-            btnRoom.Text = "Room";
+            btnRoom.Text = "Rooms";
             btnRoom.UseVisualStyleBackColor = true;
             btnRoom.Click += btnRoom_Click;
             // 
@@ -126,7 +127,7 @@
             // 
             btnClient.FlatStyle = FlatStyle.Flat;
             btnClient.ForeColor = Color.White;
-            btnClient.Location = new Point(25, 286);
+            btnClient.Location = new Point(25, 306);
             btnClient.Margin = new Padding(3, 4, 3, 4);
             btnClient.Name = "btnClient";
             btnClient.Size = new Size(285, 45);
@@ -139,7 +140,7 @@
             // 
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(25, 214);
+            btnDashboard.Location = new Point(25, 218);
             btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(285, 45);
@@ -184,66 +185,79 @@
             // panel3
             // 
             panel3.BackColor = Color.RoyalBlue;
-            panel3.Controls.Add(lblUsername);
-            panel3.Controls.Add(label4);
+            panel3.Controls.Add(userSettingsLabel);
             panel3.Controls.Add(panel4);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(339, 0);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(886, 160);
+            panel3.Size = new Size(1027, 160);
             panel3.TabIndex = 0;
             // 
-            // lblUsername
+            // userSettingsLabel
             // 
-            lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUsername.ForeColor = Color.White;
-            lblUsername.Location = new Point(116, 104);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(21, 23);
-            lblUsername.TabIndex = 2;
-            lblUsername.Text = "?";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(17, 104);
-            label4.Name = "label4";
-            label4.Size = new Size(103, 23);
-            label4.TabIndex = 1;
-            label4.Text = "Welcome:";
+            userSettingsLabel.AutoSize = true;
+            userSettingsLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            userSettingsLabel.ForeColor = Color.White;
+            userSettingsLabel.Location = new Point(17, 106);
+            userSettingsLabel.Name = "userSettingsLabel";
+            userSettingsLabel.Size = new Size(125, 23);
+            userSettingsLabel.TabIndex = 2;
+            userSettingsLabel.Text = "User Settings";
+            userSettingsLabel.Visible = false;
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
+            panel4.Controls.Add(lblUsername);
             panel4.Controls.Add(lblDateTime);
+            panel4.Controls.Add(label4);
             panel4.Controls.Add(btnLogout);
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 0);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(886, 78);
+            panel4.Size = new Size(1027, 78);
             panel4.TabIndex = 0;
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsername.ForeColor = Color.RoyalBlue;
+            lblUsername.Location = new Point(117, 44);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(21, 23);
+            lblUsername.TabIndex = 2;
+            lblUsername.Text = "?";
             // 
             // lblDateTime
             // 
             lblDateTime.AutoSize = true;
             lblDateTime.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDateTime.ForeColor = Color.RoyalBlue;
-            lblDateTime.Location = new Point(17, 37);
+            lblDateTime.Location = new Point(17, 9);
             lblDateTime.Name = "lblDateTime";
             lblDateTime.Size = new Size(18, 19);
             lblDateTime.TabIndex = 0;
             lblDateTime.Text = "?";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.RoyalBlue;
+            label4.Location = new Point(17, 44);
+            label4.Name = "label4";
+            label4.Size = new Size(103, 23);
+            label4.TabIndex = 1;
+            label4.Text = "Welcome:";
+            // 
             // btnLogout
             // 
             btnLogout.BackColor = Color.RoyalBlue;
             btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(779, 23);
+            btnLogout.Location = new Point(931, 24);
             btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(84, 33);
@@ -256,10 +270,10 @@
             // 
             panel5.Controls.Add(label1);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(339, 558);
+            panel5.Location = new Point(339, 672);
             panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(886, 48);
+            panel5.Size = new Size(1027, 48);
             panel5.TabIndex = 1;
             // 
             // label1
@@ -277,29 +291,30 @@
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(339, 160);
             panel6.Name = "panel6";
-            panel6.Size = new Size(886, 398);
+            panel6.Size = new Size(1027, 512);
             panel6.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            timer1.Tick += timer1_Tick;
             // 
             // userControlSettings1
             // 
             userControlSettings1.AutoSize = true;
             userControlSettings1.Dock = DockStyle.Fill;
+            userControlSettings1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             userControlSettings1.Location = new Point(0, 0);
             userControlSettings1.Name = "userControlSettings1";
-            userControlSettings1.Size = new Size(886, 398);
+            userControlSettings1.Size = new Size(1027, 512);
             userControlSettings1.TabIndex = 0;
             userControlSettings1.Visible = false;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             // 
             // DashboardPage
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1225, 606);
+            ClientSize = new Size(1366, 720);
             Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(panel3);
@@ -348,5 +363,6 @@
         private System.Windows.Forms.Timer timer1;
         private Button btnUserSettings;
         private Tabs.UserControlSettings userControlSettings1;
+        private Label userSettingsLabel;
     }
 }
