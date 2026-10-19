@@ -51,6 +51,7 @@
             panel6 = new Panel();
             userControlSettings1 = new hotel_reservation_system.Tabs.UserControlSettings();
             timer1 = new System.Windows.Forms.Timer(components);
+            userControlRooms1 = new hotel_reservation_system.Tabs.UserControlRooms();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -287,6 +288,7 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(userControlRooms1);
             panel6.Controls.Add(userControlSettings1);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(339, 160);
@@ -308,6 +310,16 @@
             // timer1
             // 
             timer1.Tick += timer1_Tick;
+            // 
+            // userControlRooms1
+            // 
+            userControlRooms1.Dock = DockStyle.Fill;
+            userControlRooms1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userControlRooms1.Location = new Point(0, 0);
+            userControlRooms1.Name = "userControlRooms1";
+            userControlRooms1.Size = new Size(1027, 512);
+            userControlRooms1.TabIndex = 0;
+            userControlRooms1.Visible = false;
             // 
             // DashboardPage
             // 
@@ -364,5 +376,6 @@
         private Button btnUserSettings;
         private Tabs.UserControlSettings userControlSettings1;
         private Label userSettingsLabel;
+        private Tabs.UserControlRooms userControlRooms1;
     }
 }

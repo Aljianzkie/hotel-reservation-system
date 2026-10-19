@@ -31,6 +31,7 @@
         {
             MovePanel(btnDashboard);
             userControlSettings1.Hide();
+            userControlRooms1.Hide();
             userSettingsLabel.Visible = false;
         }
 
@@ -38,6 +39,7 @@
         {
             MovePanel(btnClient);
             userControlSettings1.Hide();
+            userControlRooms1.Hide();
             userSettingsLabel.Visible = false;
         }
 
@@ -45,6 +47,7 @@
         {
             MovePanel(btnRoom);
             userControlSettings1.Hide();
+            userControlRooms1.Show();
             userSettingsLabel.Visible = false;
         }
 
@@ -52,12 +55,14 @@
         {
             MovePanel(btnReservation);
             userControlSettings1.Hide();
+            userControlRooms1.Hide();
             userSettingsLabel.Visible = false;
         }
 
         private void btnUserSettings_Click(object sender, EventArgs e)
         {
             MovePanel(btnUserSettings);
+            userControlRooms1.Hide();
             userControlSettings1.Clear();
             userControlSettings1.Show();
             userSettingsLabel.Visible = true;
